@@ -1,5 +1,5 @@
 function checkAppStatus() {
-    fetch('/health-check')
+    fetch('https://crud-cors-back.onrender.com/health-check')
         .then(response => {
             if (response.status === 200) {
                 return response.text();

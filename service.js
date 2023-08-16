@@ -37,12 +37,14 @@ function create(event) {
     $.ajax({
         type: "POST",
         crossDomain: true,
+        //following uneccessary since splitting into front and back-end
+        //because it's a response header, not a request header
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
+            // 'Access-Control-Allow-Origin': '*'
         },
-        url: "/create",
+        url: "https://crud-cors-back.onrender.com/ create",
         data: personData,
         dataType: "JSON",
         success: function (response) {
@@ -66,7 +68,7 @@ async function readAll(event) {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            url: "/readAll",
+            url: "https://crud-cors-back.onrender.com/readAll",
         });
 
         // Display the JSON data in the textarea
@@ -90,7 +92,7 @@ async function readById(event) {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            url: "/read/" + personIdValue,
+            url: "https://crud-cors-back.onrender.com/read/" + personIdValue,
         });
 
         // Display the JSON data in the textarea instead of using stringify popup
@@ -130,7 +132,7 @@ async function update(event) {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            url: "/update/" + personIdValue,
+            url: "https://crud-cors-back.onrender.com/update/" + personIdValue,
             data: JSON.stringify({
                 id: personIdValue,
                 firstName: firstNameValue,
@@ -163,7 +165,7 @@ async function deleteThing(event) {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            url: "/delete/" + personIdValue,
+            url: "https://crud-cors-back.onrender.com/delete/" + personIdValue,
         });
 
         // Display the JSON data in the textarea instead of using stringify popup
