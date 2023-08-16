@@ -44,7 +44,7 @@ function create(event) {
             'Content-Type': 'application/json',
             // 'Access-Control-Allow-Origin': '*'
         },
-        url: "https://crud-cors-back.onrender.com/ create",
+        url: "https://crud-cors-back.onrender.com/create",
         data: personData,
         dataType: "JSON",
         success: function (response) {
