@@ -12,7 +12,7 @@ function checkAppStatus() {
                 setTimeout(() => {
                     document.getElementById('loadingSection').style.display = 'none';
                     document.getElementById('mainAppSection').style.display = 'block';
-                }, 5000);
+                }, 4500);
             } else {
                 setTimeout(checkAppStatus, 5000);
             }
