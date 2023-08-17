@@ -8,6 +8,10 @@
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
     </script>
     <script src="service.js"></script>
+
+
+    <!-- this is a plugin for input masking -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 
 <body>
@@ -43,6 +47,14 @@
 
 
 <!-- Main App Section -->
+
+<!-- this is for input masking -->
+<script>
+    $(document).ready(function(){
+      $('#birth-date').mask('0000-00-00');
+    });
+</script>
+
 <div id="mainAppSection" style="display: none;">
     <div class="header">
         <h1>DEAN'S BIG BOY CRUD APP</h1>
