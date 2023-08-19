@@ -175,5 +175,29 @@ async function deleteThing(event) {
     }
 }
 
+async function fetchAndUpdateStats() {
+    try {
+        const response = await $.ajax({
+            type: "GET",
+            crossDomain: true,
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            url: "https://crud-cors-back.onrender.com/stats",
+        });
+
+        // Update the frontend with the stats
+        document.querySelector("#cpuCount .stat-value").textContent = response.cpuCount;
+        document.querySelector("#jvmMemory .stat-value").textContent = response.jvmMemory;
+        document.querySelector("#cpuSpeed .stat-value").textContent = response.cpuSpeed + " MHz";
+
+    } catch (error) {
+        console.error("Error fetching stats:", error);
+    }
+}
+
+
 
 
