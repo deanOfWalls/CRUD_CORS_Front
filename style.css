@@ -35,9 +35,11 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    max-width: 420px;
-    margin: 20px auto;
+    max-width: 90%;  /* Increase this width */
+    margin: 0 auto;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;  /* Allow elements to wrap */
 }
 
 .form-container textarea {
@@ -61,12 +63,8 @@ body {
 }
 
 .form-container button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-right: 5px;  /* Add a little space between buttons */
+    flex: 1;  /* Allow the buttons to take equal space side by side */
 }
 
 .form-container input:focus,
@@ -114,11 +112,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 50vh; /* Adjust this if needed */
+    min-height: 30vh;  /* Decreased the min-height */
     width: 60%; 
-    margin: 40px auto; /* Center the section on the page */
+    margin: 40px auto; 
     text-align: center;
-    padding: 10px;
+    padding: 5px;  /* Reduced padding */
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
