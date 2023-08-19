@@ -104,13 +104,15 @@ body {
 }
 
 #statsSection {
-    width: 60%; /* Adjust width as needed. */
-    margin-top: 20px;
+    display: none;
+    /* width: 60%; 
+    margin: 20px auto; 
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
 
 .stat-value {
     font-weight: bold;

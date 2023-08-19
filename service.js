@@ -193,16 +193,17 @@ async function fetchAndUpdateStats() {
         document.querySelector("#cpuSpeed .stat-value").textContent = response.cpuSpeed + " MHz";
         document.querySelector("#jvmMemory .stat-value").textContent = response.jvmMemory;
 
+        // Now that we have fetched the stats, display the stats section
+        document.getElementById('statsSection').style.display = 'block';
 
     } catch (error) {
-        console.error("Error fetching stats:", error);
         console.error("Error fetching stats:", error);
         document.querySelector("#cpuCount .stat-value").textContent = "N/A";
         document.querySelector("#cpuSpeed .stat-value").textContent = "N/A";
         document.querySelector("#jvmMemory .stat-value").textContent = "N/A";
-
     }
 }
+
 
 
 
