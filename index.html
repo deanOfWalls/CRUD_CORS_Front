@@ -4,56 +4,92 @@
 <head>
     <title>Dean's Basic CRUD Demo Application</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+    <script src="service.js"></script>
+
+
+    <!-- this is a plugin for input masking -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 
 <body>
-    <!-- Loading Section -->
-    <div id="loadingSection" style="text-align: center; padding-top: 50px;">
-        <img src="loading.gif" alt="Loading...">
-        <div class="logo is-animation">
-            <span>L</span>
-            <span>O</span>
-            <span>A</span>
-            <span>D</span>
-            <span>I</span>
-            <span>N</span>
-            <span>G</span>
-        </div>
-        <p style="font-family: 'Roboto', sans-serif; font-size: 20px;">This may take up to 3 minutes</p>
-    </div>
 
-    <!-- Main App Section -->
-    <div id="mainAppSection" style="display: none;">
-        <div class="header">
-            <h1>DEAN'S BIG BOY CRUD APP</h1>
-        </div>
-        <div class="form-container">
-            <form>
-                <input id="person-id" onclick="highlightAll(event)" placeholder="ID" autocomplete="off"><br>
-                <input id="first-name" placeholder="First Name" autocomplete="off"><br>
-                <input id="last-name" placeholder="Last Name" autocomplete="off"><br>
-                <input id="birth-date" placeholder="Birthdate YYYY-MM-DD" autocomplete="off"><br>
-                <button onClick="create(event)">Create</button>
-                <button onClick="readById(event)">Read</button>
-                <button onClick="readAll(event)">Read All</button>
-                <button onClick="update(event)">Update</button>
-                <button onClick="deleteThing(event)">Delete</button>
-            </form>
-            <textarea id="json-display" rows="20" readonly></textarea>
-        </div>
-    </div>
+<!-- Loading Section -->
+<div id="loadingSection" style="text-align: center; padding-top: 50px;">
+    <img src="loading.gif" alt="Loading...">
 
-    <!-- Stats Section -->
-    <div id="statsSection">
-        <h2>System Stats</h2>
-        <div id="cpuCount">CPU Count: <span class="stat-value"></span></div>
-        <div id="cpuSpeed">CPU Speed: <span class="stat-value"></span></div>
-        <div id="jvmMemory">JVM Memory: <span class="stat-value"></span></div>
-    </div>
 
-    <script src="status.js"></script>
+    <div class="logo is-animation">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+      </div>
+
+      <p style="font-family: 'Roboto', sans-serif; font-size: 20px;">This may take up to 3 minutes</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Main App Section -->
+
+<!-- this is for input masking -->
+<script>
+    $(document).ready(function(){
+      $('#birth-date').mask('0000-00-00');
+    });
+</script>
+
+<div id="mainAppSection" style="display: none;">
+    <div class="header">
+        <h1>DEAN'S BIG BOY CRUD APP</h1>
+    </div>
+    <div class="form-container">
+        <form>
+            <input id="person-id" onclick="highlightAll(event)" placeholder="ID" autocomplete="off"><br>
+            <input id="first-name" placeholder="First Name" autocomplete="off"><br>
+            <input id="last-name" placeholder="Last Name" autocomplete="off"><br>
+            <input id="birth-date" placeholder="Birthdate YYYY-MM-DD" autocomplete="off"><br>
+            <button onClick="create(event)">Create</button>
+            <button onClick="readById(event)">Read</button>
+            <button onClick="readAll(event)">Read All</button>
+            <button onClick="update(event)">Update</button>
+            <button onClick="deleteThing(event)">Delete</button>
+        </form>
+        <textarea id="json-display" rows="20" readonly></textarea>
+    </div>
+</div>
+
+
+<!-- Stats Section -->
+<div id="statsSection">
+    <h2>System Stats</h2>
+    <div id="cpuCount">CPU Count: <span class="stat-value"></span></div>
+    <div id="jvmMemory">JVM Memory: <span class="stat-value"></span></div>
+    <div id="cpuSpeed">CPU Speed: <span class="stat-value"></span></div>
+</div>
+
+
+<script src="status.js"></script>  <!-- Moved this to the end -->
+
+
+
+
+
 </body>
-
 </html>
