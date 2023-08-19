@@ -190,11 +190,17 @@ async function fetchAndUpdateStats() {
 
         // Update the frontend with the stats
         document.querySelector("#cpuCount .stat-value").textContent = response.cpuCount;
-        document.querySelector("#jvmMemory .stat-value").textContent = response.jvmMemory;
         document.querySelector("#cpuSpeed .stat-value").textContent = response.cpuSpeed + " MHz";
+        document.querySelector("#jvmMemory .stat-value").textContent = response.jvmMemory;
+
 
     } catch (error) {
         console.error("Error fetching stats:", error);
+        console.error("Error fetching stats:", error);
+        document.querySelector("#cpuCount .stat-value").textContent = "N/A";
+        document.querySelector("#cpuSpeed .stat-value").textContent = "N/A";
+        document.querySelector("#jvmMemory .stat-value").textContent = "N/A";
+
     }
 }
 
