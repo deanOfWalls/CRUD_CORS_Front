@@ -4,23 +4,14 @@
 <head>
     <title>Dean's Basic CRUD Demo Application</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-        </script>
-    <script src="service.js"></script>
-
-
-    <!-- this is a plugin for input masking -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 
 <body>
-
     <!-- Loading Section -->
     <div id="loadingSection" style="text-align: center; padding-top: 50px;">
         <img src="loading.gif" alt="Loading...">
-
-
         <div class="logo is-animation">
             <span>L</span>
             <span>O</span>
@@ -30,31 +21,10 @@
             <span>N</span>
             <span>G</span>
         </div>
-
         <p style="font-family: 'Roboto', sans-serif; font-size: 20px;">This may take up to 3 minutes</p>
-
-
-
-
     </div>
 
-
-
-
-
-
-
-
-
     <!-- Main App Section -->
-
-    <!-- this is for input masking -->
-    <script>
-        $(document).ready(function () {
-            $('#birth-date').mask('0000-00-00');
-        });
-    </script>
-
     <div id="mainAppSection" style="display: none;">
         <div class="header">
             <h1>DEAN'S BIG BOY CRUD APP</h1>
@@ -75,7 +45,6 @@
         </div>
     </div>
 
-
     <!-- Stats Section -->
     <div id="statsSection">
         <h2>System Stats</h2>
@@ -84,13 +53,7 @@
         <div id="jvmMemory">JVM Memory: <span class="stat-value"></span></div>
     </div>
 
-
-    <script src="status.js"></script> <!-- Moved this to the end -->
-
-
-
-
-
+    <script src="status.js"></script>
 </body>
 
 </html>
