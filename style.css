@@ -116,7 +116,7 @@ html, body {
     align-items: center;
     justify-content: center;
     width: 580px;  /* Matched the width of the form-container */
-    margin: 40px auto;
+    margin: 100vh auto 40px;  /* Adjust the margin-top to be 100vh */
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc;
