@@ -6,9 +6,6 @@ html, body {
     background-color: #f0f8ff;
 }
 
-body {
-    padding-top: 70px; /* Adjusted for the height of the header */
-}
 
 /* Header Styles */
 .header {
@@ -35,11 +32,9 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    max-width: 90%;  /* Increase this width */
-    margin: 0 auto;
+    max-width: 420px;
+    margin: 20px auto;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;  /* Allow elements to wrap */
 }
 
 .form-container textarea {
@@ -63,8 +58,12 @@ body {
 }
 
 .form-container button {
-    margin-right: 5px;  /* Add a little space between buttons */
-    flex: 1;  /* Allow the buttons to take equal space side by side */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .form-container input:focus,
@@ -112,11 +111,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 30vh;  /* Decreased the min-height */
+    height: 100vh; /* Make it span the viewport height */
     width: 60%; 
-    margin: 40px auto; 
     text-align: center;
-    padding: 5px;  /* Reduced padding */
+    padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
