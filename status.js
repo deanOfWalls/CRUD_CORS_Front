@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Initially hides the loading section and displays the form
-    document.getElementById('loadingSection').style.display = 'none';
-    document.querySelector('.form-container').style.display = 'block';
+    // Initially displays the loading section and hides the form and stats
+    document.getElementById('loadingSection').style.display = 'block';
+    document.querySelector('.form-container').style.display = 'none';
+    document.getElementById('statsSection').style.display = 'none';
 
     // Check system stats after 5 seconds
     setTimeout(() => {
@@ -18,7 +19,10 @@ function checkAppStatus() {
             throw new Error('Not up yet');
         })
         .then(status => {
-            document.getElementById('statsSection').style.display = 'block'; // Display the stats section
+            document.getElementById('loadingSection').style.display = 'none';  // Hide the loading section
+            document.getElementById('statsSection').style.display = 'block';  // Display the stats section
+            document.querySelector('.form-container').style.display = 'block'; // Display the form
+            
             const statsElements = document.querySelectorAll('.stat-value');
             const stats = JSON.parse(status);
 
@@ -28,5 +32,7 @@ function checkAppStatus() {
         })
         .catch(error => {
             console.log(error);
+            // If there's an error, you can choose to keep the loading screen 
+            // or inform the user to try again.
         });
 }
