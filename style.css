@@ -8,6 +8,10 @@ html, body {
     background-color: #f0f8ff;
 }
 
+body {
+    padding-top: 70px; /* Adjusted for the height of the header */
+}
+
 /* Header Styles */
 .header {
     display: flex;
@@ -118,17 +122,17 @@ html, body {
 
 /* Stats Section Styles */
 #statsSection {
-    display: none;  /* Initially set to none */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 450px;
-    margin: 20px auto; /* Adjusted the margin */
+    min-height: 50vh; /* Adjust this if needed */
+    width: 60%; 
+    margin: 40px auto; /* Center the section on the page */
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
 }
 
 .stat-value {
