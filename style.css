@@ -1,15 +1,9 @@
-/* Corrected style.css */
-
 /* General Styles */
 html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
-}
-
-body {
-    padding-top: 70px; /* Adjusted for the height of the header */
 }
 
 /* Header Styles */
@@ -37,19 +31,13 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    max-width: 450px;
-    margin: 90px auto 20px;
+    max-width: 420px;
+    margin: 20px auto;
     position: relative;
 }
 
-.form-container textarea, 
-.form-container label, 
-.form-container input[type="text"], 
-.form-container button {
-    width: 100%;
-}
-
 .form-container textarea {
+    width: 100%;
     resize: vertical;
     margin-top: 10px;
 }
@@ -64,21 +52,17 @@ body {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
     margin-bottom: 10px;
 }
 
 .form-container button {
-    padding: 7px 18px;
+    padding: 10px 20px;
     background-color: #007BFF;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; 
-}
-
-.form-container button:last-child {
-    margin-right: 0;
 }
 
 .form-container input:focus,
@@ -126,9 +110,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 50vh; /* Adjust this if needed */
+    height: 100vh; /* Make it span the viewport height */
     width: 60%; 
-    margin: 40px auto; /* Center the section on the page */
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc;
@@ -140,7 +123,7 @@ body {
     font-size: 0.9em;
 }
 
-/* Footer styles */
+/* Footer styles (from previous snippet) */
 footer {
     padding: 20px;
     background-color: #292929;
