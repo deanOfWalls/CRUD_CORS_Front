@@ -31,7 +31,7 @@ html, body {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    max-width: 580px; /* Increased the width */
+    max-width: 500px; /* Increased the width */
     margin: 90px auto 20px; 
     position: relative;
 }
