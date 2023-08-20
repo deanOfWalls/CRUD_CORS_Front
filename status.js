@@ -12,6 +12,7 @@ function checkAppStatus() {
                 setTimeout(() => {
                     document.getElementById('loadingSection').style.display = 'none';
                     document.getElementById('mainAppSection').style.display = 'block';
+                    fetchAndUpdateStats();  // Call the function to fetch and update stats.
                 }, 4500);
             } else {
                 setTimeout(checkAppStatus, 5000);

@@ -203,8 +203,3 @@ async function fetchAndUpdateStats() {
         document.querySelector("#jvmMemory .stat-value").textContent = "N/A";
     }
 }
-
-
-
-
-
