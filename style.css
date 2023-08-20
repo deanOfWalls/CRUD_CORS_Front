@@ -57,6 +57,7 @@ html, body {
 }
 
 .form-container button {
+    margin-top: 10px;
     padding: 10px 20px;
     background-color: #007BFF;
     color: #fff;
