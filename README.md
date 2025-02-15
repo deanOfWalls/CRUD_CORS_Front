@@ -82,4 +82,3 @@ The `CRUD_demo` web application is a simple and straightforward demonstration of
 Boot, jQuery, and H2. It provides an easy-to-understand introduction to building and deploying CRUD
 applications. Its containerized nature ensures consistent behavior across different environments, while its deployment
 on Render.com makes it easily accessible to users worldwide.
-
